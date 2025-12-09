@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            margin: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Enrollment Form</h2>
+        <form action="StudForm.php" method="post"> 
+            
+
+            <div class="form-group">
+                <label for="stud_fname">First Name:</label>
+                <input type="text" id="stud_fname" name="stud_fname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="stud_lname">Last Name:</label>
+                <input type="text" id="stud_lname" name="stud_lname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="stud_dob">Date of Birth:</label>
+                <input type="date" id="stud_dob" name="stud_dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="stud_pnum">Phone Number:</label>
+                <input type="tel" id="stud_pnum" name="stud_pnum" required>
+            </div>
+
+            <div class="form-group">
+                <label for="stud_gender">Gender:</label>
+                <select id="stud_gender" name="stud_gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="program">Program:</label>
+                <select id="prog_name" name="prog_name" required>
+                    <option value="">Select a Program...</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Systems">Information Systems</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="program">Year Level:</label>
+                <select id="year_level" name="year_level" required>
+                    <option value="">Select a Year Level...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="stud_add">Address:</label>
+                <textarea id="stud_add" name="stud_add" rows="3" required></textarea>
+            </div>
+
+            <button type="submit">Enroll Student</button>
+            <a href="POTSEnrollmentForm.html">Already in the system?</a>
+        </form>
+    </div>
+</body>
+</html>
